@@ -1,0 +1,23 @@
+Objects is a data structure which stores data in key: value pairs
+The key can be any string and the value stored can be of any type or even another object
+properties:
+data can be added, modified, and deleted at runtime
+
+internally they can be thought of as dynamic hash tables
+SYNTAX:
+to initialize an object
+object_name= {}
+
+the keys can be added:
+data= {
+    name: "abc",
+    age: 20
+}
+
+ to add a key:value pair or modify
+ data[rollno]= 32
+
+ to delete a pair
+ data.rollno
+
+ 
