@@ -1,0 +1,30 @@
+HTTP1.1 - It is a hypertext transfer protocol that is text-based protocol.
+since HTTP1.1 is a text based protocol, it is easy to implement and debug
+it is used for transmitting web pages over the internet. it uses request response model to communicate over a TCP connection(Transmission control protocol)
+DISADVANTAGES OF HTTP1.1:
+
+each tcp connection could only handle one request at a time.
+it could only perform limitedly, caused network congestion
+server cannot send the resources client requested for, it can only respond
+
+HTTP2- it is the same as HTTP1.1 but is a binary protocol that is like a improved version of HTTP1.1 based on latency, effiency and performance
+
+WHY HTTP2 CAME?
+
+It evloved to overcome the issue of handling mulitple requests simultaneously.
+improved version of HTML1.1 for latency, performance etc
+
+ADVANTAGES OF HTTP2:
+
+reduces the size of headers and speeds up the data transfer
+servers can send resources to client before the client request 
+improves page load times
+improved user experience
+binary protocol- helps to communicate faster
+
+DISADVANTAGES OF HTTP2:
+
+binary nature of HTTP2 is more complex to implement and debug
+some implementation uses SSL/TLS
+some servers dont fully support HTTP2 due to complexity
+the initial connection setup may be slower because of SSL/TLS handshake
