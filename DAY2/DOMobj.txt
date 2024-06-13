@@ -1,0 +1,18 @@
+Document and window are global objects that enables interaction between web pages
+
+WINDOW:
+
+It is a object that represents the browser window that contains a DOM document. 
+It is a top level global object in which all global objects, functions, variables are members of this object.
+All the variables and functions declared gloablly are members of the window object
+Interface: there are many methods to interact with the browser for various tasks like window.alert(), window.open() etc
+we can get information about the history and navigate locations with window properties
+
+
+DOCUMENT:
+
+it is the object that is loaded on the web page. it is also a property of the window object and part of the Document Object Model.
+DOM Manipulation: Provides methods and properties to create, access, and manipulate the HTML elements of a web page.
+There are various methods to access the elements and select them like getElementById() etc
+document object allows the content to be dynamically modified, such as the atrributes, styles etc
+the document object is property of window, so it can only be implicitly accessed by using window.document
