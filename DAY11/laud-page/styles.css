@@ -1,0 +1,8 @@
+.navbar-brand {
+    font-size: 2rem;
+    margin-top: 10px; /* Adjust this value if you need more space */
+    color: #fff;
+}
+.navbar {
+    height: 400px; /* Adjust the height according to your design */
+}
