@@ -1,8 +1,12 @@
 .navbar-brand {
     font-size: 2rem;
-    margin-top: 10px; /* Adjust this value if you need more space */
+    margin-top: 10px; 
     color: #fff;
 }
 .navbar {
-    height: 400px; /* Adjust the height according to your design */
+    height: 400px;
+}
+
+.card-text {
+    color: rgba(211, 211, 211, 0.9); 
 }
