@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>API Data Fetch</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">API Data Fetch</h1>
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="sec-header bg-primary text-white text-center">Cat Facts</div>
+                    <div class="card-body">
+                        <ul id="cat-fact-list" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="sec-header bg-primary text-white text-center">Weather Information</div>
+                    <div class="card-body" id="weather-info">
+                        <p>Loading..</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="sec-header bg-primary text-white text-center">Jokes</div>
+                    <div class="card-body">
+                        <ul id="joke-list" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
