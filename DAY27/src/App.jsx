@@ -6,6 +6,7 @@ import ListPages from "./Components/ListPage";
 import { UserContextProvider } from "./Components/context/usercontext";
 
 function App() {
+  // imported the components and context file
   return (
     <div className="App">
       <Header />
