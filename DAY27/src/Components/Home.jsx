@@ -2,6 +2,7 @@ import React from "react";
 import { useUserContext } from "./context/usercontext";
 
 function Home() {
+  // Destructure
   const { name, setName, email, setEmail, phone, setPhone, handleFormSubmit } =
     useUserContext();
   const formId = 11;
@@ -11,6 +12,7 @@ function Home() {
       backgroundImage: "linear-gradient(to right, #6a11cb, #2575fc)", 
       backgroundSize: "cover",
     }}>
+      {/*Form input*/}
       <div className="col-lg-4 col-md-6 col-sm-8">
         <div className="card shadow-lg border-0 rounded-3">
           <div className="card-body p-5">
@@ -69,7 +71,7 @@ function Home() {
                   Remember me
                 </label>
               </div>
-
+              {/*Add button*/}
               <button className="btn btn-primary w-100" type="submit">
                 Add To List
               </button>

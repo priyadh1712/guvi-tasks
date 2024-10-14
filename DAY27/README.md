@@ -37,14 +37,14 @@ This project is a React application that demonstrates CRUD operations with user 
 1. **Clone the Repository**
 
    ```bash
-   git clone
+   git clone repo-name
 
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd
+   cd repo-name
 
    ```
 
@@ -70,7 +70,8 @@ This project is a React application that demonstrates CRUD operations with user 
 
 ## Conclusion
 
-This React application showcases how to perform CRUD operations using Axios to interact with a mock API. It emphasizes a clean, responsive design and an intuitive user experience.
+This React application showcases how to perform CRUD operations using Axios to interact with a mock API. 
+It emphasizes a clean, responsive design and an intuitive user experience.
 
 ---
 
