@@ -15,9 +15,6 @@ const Cart = () => {
       <div className="container my-5">
         <h2 className="text-center mb-4 text-white">Your Cart</h2>
         {product.map((e, i) => {
-          const discountPrice = Math.round(
-            e.price * (e.discountPercentage / 100)
-          );
           const [quantity, setQuantity] = useState(1);
 
           const addQuantity = () => {
@@ -28,16 +25,12 @@ const Cart = () => {
             if (quantity > 1) {
               setQuantity(quantity - 1);
             }
-            setProduct(product);
           };
 
           const removebtnQuantity = () => {
             setProduct((prevProducts) =>
-              prevProducts.map((item) =>
-                item === e ? { ...item, quantity: 0 } : item
-              )
+              prevProducts.filter((item) => item.id !== e.id)
             );
-            setQuantity(0);
           };
 
           return (
@@ -55,7 +48,7 @@ const Cart = () => {
                   <img
                     src={e.image}
                     className="img-fluid p-3"
-                    alt="..."
+                    alt={e.title}
                     style={{ borderRadius: "15px 0 0 15px" }}
                   />
                 </div>
@@ -66,35 +59,14 @@ const Cart = () => {
                       <h4 className="card-title text-danger">${e.price}</h4>
                     </div>
                     <p className="text-muted mb-2">
-                      <b>Brand:</b> {e.brand}
+                      <b>Category:</b> {e.category}
                     </p>
                     <p className="text-muted mb-2">
                       <b>Description:</b> {e.description}
                     </p>
                     <p className="text-success mb-2">
-                      <b>In Stock:</b> {e.stock}
+                      <b>Rating:</b> {e.rating.rate} ★ ({e.rating.count} reviews)
                     </p>
-                    <p>
-                      {Array(Math.min(e.rating, 5))
-                        .fill(0)
-                        .map((_, index) => (
-                          <i
-                            key={index}
-                            className="fa fa-star text-warning"
-                            style={{ marginRight: "2px" }}
-                          ></i>
-                        ))}
-                      {Array(Math.max(5 - e.rating, 0))
-                        .fill(0)
-                        .map((_, index) => (
-                          <i
-                            key={index}
-                            className="fa fa-star-o text-warning"
-                            style={{ marginRight: "2px" }}
-                          ></i>
-                        ))}
-                    </p>
-
                     <div className="d-flex justify-content-between align-items-center mt-4">
                       <div className="d-flex">
                         <button
@@ -134,22 +106,12 @@ const Cart = () => {
                     <hr />
                     <div className="bottom">
                       <div className="d-flex justify-content-between align-items-center">
-                        <p className="text-muted">Original Price (1 item):</p>
+                        <p className="text-muted">Price (1 item):</p>
                         <p className="fw-bold">${e.price}</p>
                       </div>
                       <div className="d-flex justify-content-between align-items-center">
-                        <p className="text-muted">Discount Amount:</p>
-                        <p className="text-success">- ${discountPrice}</p>
-                      </div>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <p className="text-muted">Final Price:</p>
-                        <p className="fw-bold">${e.price - discountPrice}</p>
-                      </div>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <p className="text-muted">Total Amount:</p>
-                        <h5 className="text-primary">
-                          ${e.price * quantity}
-                        </h5>
+                        <p className="text-muted">Total:</p>
+                        <h5 className="text-primary">${e.price * quantity}</h5>
                       </div>
                     </div>
                     <button
