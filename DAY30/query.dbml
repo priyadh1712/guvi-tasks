@@ -1,0 +1,62 @@
+Table topics {
+  topicid INT [primary key]
+  topic VARCHAR(200)
+  topic_date DATE
+  mentorid INT
+  batchid INT
+}
+
+Table mentors {
+  mentorid INT [primary key]
+  mentorname VARCHAR(100)
+  mentoremail VARCHAR(100)
+}
+
+Table tasks {
+  taskid INT [primary key]
+  topicid INT
+  task VARCHAR(1000)
+  batchid INT
+}
+
+Table users {
+  userid INT [primary key]
+  username VARCHAR(100)
+  useremail VARCHAR(100)
+  batchid INT
+}
+
+Table queries {
+  queryid INT [primary key]
+  userid INT
+  querybody VARCHAR(1000)
+  mentorid INT}
+
+Table attendance {
+  attendaceid INT [primary key]
+  userid INT
+  topicid INT
+  attended TINYINT(1)
+}
+
+Table company_drives {
+  drive_id INT [primary key]
+  userid INT
+  drive_date DATE
+  company VARCHAR(100)
+}
+
+Table codekata {
+  userid INT [primary key]
+  num_of_problems_solved INT
+}
+
+Ref: topics.mentorid > mentors.mentorid  // topics to mentors (many-to-one)
+Ref: tasks.topicid > topics.topicid   // tasks to topics (many-to-one)
+Ref: tasks.batchid > users.batchid    // tasks to users (many-to-one)
+Ref: queries.userid > users.userid     // queries to users (many-to-one)
+Ref: queries.mentorid > mentors.mentorid // queries to mentors (many-to-one)
+Ref: attendance.userid > users.userid    // attendance to users (many-to-one)
+Ref: attendance.topicid > topics.topicid  // attendance to topics (many-to-one)
+Ref: company_drives.userid > users.userid // company_drives to users (many-to-one)
+Ref: codekata.userid > users.userid        // codekata to users (one-to-one)
